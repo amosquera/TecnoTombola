@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Tecno Tómbola</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="" />
+        <link rel="shortcut icon" href="img/favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/default.css" />
+        <link rel="stylesheet" type="text/css" href="css/component.css" />
+        <link rel="stylesheet" type="text/css" href="css/custom.css" />
+        <script src="js/libs/modernizr.custom.js"></script>        
+    </head>
+    <body>
+        <!--modal-1-->
+        <div class="md-modal md-effect-1" id="modal-1">
+            <div class="md-content yellow">
+                <h1 align="center">Tecno Tómbola</h1>
+                <div>
+                    <p id="msg">Debe ingresar un número valido</p>
+                    <ul style="list-style: none">
+                        <li><strong>1:</strong> Mayor a cero.</li>
+                        <li><strong>2:</strong> Solo caracteres numericos.</li>
+                        <li><strong>3:</strong> No debes dejar espacios en blanco.</li>
+                    </ul>
+                    <button class="md-close yellowBtn" id="iAmUsed">Regresar</button>
+                </div>
+            </div>
+        </div>
+        <!--modal-2-->
+        <div class="md-modal md-effect-1" id="modal-2">
+            <div class="md-content yellow">
+                <h3>Tecno Tómbola</h3>
+                <div>
+                    <p>Debe seleccionar o ingresar manualmente los participantes</p>
+                    <button class="md-close yellowBtn">Regresar</button>
+                </div>                
+            </div>
+        </div>
+        <!--modal-3-->
+        <div class="md-modal md-effect-1" id="modal-3">
+            <div class="md-content yellow">
+                <h3>Tecno Tómbola</h3>
+                <div>
+                    <p>Debe ingresar mas de 1 participantes</p>
+                    <button id="pruebaBTN" class="md-close yellowBtn">Regresar</button>
+                </div>                
+            </div>
+
+        </div>
+        <!--modal-4-->
+        <div class="md-modal md-effect-1" id="modal-4">
+            <div class="md-content yellow">
+                <h3>Tecno Tómbola</h3>
+                <div>
+                    <p>Felicidades <span id="ganador1"></span></p>
+                    <button class="md-close yellowBtn">Regresar</button>
+                </div>
+            </div>
+        </div>    
+        <!--modal-5-->
+        <div class="md-modal md-effect-1" id="modal-5">
+            <div class="md-content">
+                <h3>Tecno Tómbola</h3>
+                <div style="text-align: center;">
+                    <p style="font-size: 1.2em;">Ingrese en tiempo de espera para detener la tómbola </p>
+                    <input type="text" id="modTime" onkeypress='validate(event);' style="height: 30px;width: 220px;margin: 10px;" />
+                    <button class="md-close" id="listoBTN">Listo!</button>
+                </div>
+            </div>
+        </div>
+        <!--btns modals-->
+        <div class="oculto">
+            <button id="modal1" class="md-trigger oculto" data-modal="modal-1" data-bgColor="rgb(92, 92, 36)"></button>
+            <button id="modal2" class="md-trigger oculto" data-modal="modal-2" data-bgColor="rgb(92, 92, 36)"></button>
+            <button id="modal3" class="md-trigger oculto" data-modal="modal-3" data-bgColor="rgb(92, 92, 36)"></button>
+            <button id="modal4" class="md-trigger oculto" data-modal="modal-4" data-bgColor="rgb(92, 92, 36)"></button>
+            <button id="modal5" class="md-trigger oculto" data-modal="modal-5" data-bgColor="#91cfa1"></button>
+        </div>
+        <!-- /container -->
+        <div id="prin" class="container">	
+            <!--header-->
+            <header class="clearfix" style="min-width: 380px;">
+                <h1>Tecno Tómbola <span>una forma simple de regalar</span></h1>	
+            </header>
+            <div id="initD" class="main">
+                <div id="texts" class="mainDiv oculto">
+                    <p>the main menu appears beneath and the menu icon slides to the right side while the label slides up. To close the menu, the menu icon needs to be clicked again.</p>
+                    <button class="md-close" onclick="go();">Agregar participantes</button>
+                    &nbsp; 
+                </div>
+                <!--INIT-->
+                <div id="init" class="mainDiv">
+                    <div class="backD">
+                        <button class="md-close back" onclick="back();" >&lt;</button><span id="tText1"></span><br />
+                    </div>
+                    <div class="titleD">
+                        <span>Ingrese los participantes</span>
+                    </div>
+                    <br />
+                    <div id="operatios" class="operatios">
+                        <div style="min-width: 383px;">
+                            <small>detenerme en</small>
+                            <button id="minus" onclick="minus();">-</button>
+                            <span id="timeS" onclick="editTimeS();" contenteditable onkeypress='validate(event)'> 5 </span>
+                            <button id="manus"  onclick="manus();">+</button>
+                            <small>segundos</small>
+                        </div>
+                        <textarea id="textA" cols="1">
+                        </textarea><br />
+                        <div>
+                            <small>Copie y pegue la lista de participantes o ingreselos uno a uno presionando "ENTER" para separarlos.</small>
+                        </div>
+                        <button onclick="go2();">Iniciar Tómbola</button>                        
+                    </div>
+                    &nbsp; 
+                </div>
+                <!--TOMBOINIT-->
+                <div id="tomboInit" class="mainDiv oculto">
+                    <div class="backD">
+                        <button id="back2" class="md-close back" onclick="back2();" >&lt;</button>                        
+                    </div>
+                    <div id="participantes">
+                        <div style="min-height: 300px;height: 300px;">
+                            <h2 id="timer"></h2>
+                            <br />
+                        </div>
+                        <div id="par">
+
+                        </div>
+                    </div>
+                    &nbsp;
+                </div>
+                <!--GANADOR-->
+                <div id="ganador" class="mainDiv oculto">
+                    <div class="backD">
+                        <button class="md-close back" onclick="back();" >&lt;</button><br />
+                    </div>
+                    <div class="titleD">
+                        <span>El ultimo ganador fue</span>
+                        <h3 id="lastWinner"></h3>
+                    </div>
+                    <div class="operatios">
+                        <button onclick="go3();">Siguiente ganador</button>    
+                    </div>
+                </div>
+                <!--Opciones-->
+                <div class="side">
+                    <nav class="dr-menu">
+                        <div class="dr-trigger"><span class="dr-icon dr-icon-menu"></span><a class="dr-label">Opciones</a></div>
+                        <ul>
+                            <li><a class="dr-icon dr-icon-camera" href="#">Videos</a></li>
+                            <li><a class="dr-icon dr-icon-heart" href="#">Favorites</a></li>
+                            <li><a class="dr-icon dr-icon-download" href="#">Downloads</a></li>
+                            <li><a class="dr-icon dr-icon-settings" href="#">Settings</a></li>
+                            <li><a class="dr-icon dr-icon-switch" href="#">Logout</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="md-overlay"></div><!-- the overlay element -->
+        <!-- classie.js by @desandro: https://github.com/desandro/classie -->
+        <script src="js/libs/classie.js"></script>
+        <script src="js/libs/modalEffects.js"></script>
+        <script src="js/libs/google.fastbutton.js"></script>
+        <script src="js/libs/jquery.min.js"></script>
+        <script src="js/libs/jquery.timer.js"></script>
+        <script src="js/libs/ytmenu.js"></script>        
+        <script src="js/code.js"></script>
+    </body>
+</html>

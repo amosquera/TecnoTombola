@@ -1,0 +1,17 @@
+CACHE MANIFEST
+
+# Explicitly cached 'master entries'.
+CACHE:
+/favicon.ico
+
+# Resources that require the user to be online.
+NETWORK:
+/index.html
+*
+
+
+# static.html will be served if main.py is inaccessible
+# offline.jpg will be served in place of all images in images/large/
+# offline.html will be served in place of all other .html files
+FALLBACK:
+img/bg_repeat2.png img/bg_repeat.png

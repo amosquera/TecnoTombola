@@ -1,0 +1,102 @@
+a{
+    color:red;
+}
+aside{
+    padding-left: 9%;   
+}
+body{
+    font-size: 20px;
+    height: 100%;
+    overflow-x: hidden;
+    text-align: center; 
+}
+footer { 
+    font-size:11px;
+    padding: 10px;
+}
+h2{
+    font-size: 35px;
+    color:#2491B3;
+}
+h1{
+    font-size: 60px;
+    color:#B35D24;
+}
+h3,label{
+    color:rgb(53, 97, 117);
+}
+header{
+    padding: 10px;
+}
+p{
+    color:#B35D24;
+}
+p.s{
+    margin:0 0;
+    display: none;
+    color: #2491B3;
+}
+span{
+    color:rgb(53, 97, 117);
+}
+textarea{
+    height: 200px;
+    margin-bottom: 0px;
+    width: 200px;   
+}    
+#formulario4{
+    /*background-image:url('../img/back.png') !important;*/
+    background-color:#cccccc;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:bottom;
+    background-size: 100% 100% !important;
+    height: 100% !important;
+    width: 100%!important;
+}
+#flag{
+    width: 25px !important;
+}
+.btn-large{
+    width: 245px !important;
+}
+.inter{
+    height: 320px;
+    max-height: 320px;
+    min-height: 320px;
+    overflow: hidden;
+}
+.oculto{
+    display: none;
+}
+.timeriSection{
+    height: 100px;
+    line-height:1em;
+    margin-top:25%;
+}
+.styleBox{
+    background-image: url('../img/grey2.png');
+    background-repeat: repeat;
+    box-shadow: inset 0px 5px 10px -5px rgba(0, 0, 0, 0.5);
+    border:solid #DBDBDB 10px;
+    color:rgb(160, 160, 160);
+    display: inline-table;
+    height: 320px;
+    line-height: 25px;
+    max-height: 320px;
+    min-height: 320px;
+    overflow: hidden;
+    padding:25px;
+    width: 40%;
+
+    -webkit-box-shadow: inset 0px 5px 10px -5px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width:810px){
+    p{
+        max-width: 570px;
+    }
+}
+@media screen and (max-width:400px){
+    .chromeframe{display: none;}
+}

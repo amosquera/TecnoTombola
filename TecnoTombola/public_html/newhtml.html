@@ -1,0 +1,25 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <textarea id="textA">
+        </textarea>
+        <script src="js/libs/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#textA').on('input paste keydown keypress', resizeTextBox);
+            });
+            function resizeTextBox() {
+                this.style.height = "1px";
+                this.style.height = (25 + this.scrollHeight) + "px";
+            }
+        </script>
+    </body>
+</html>

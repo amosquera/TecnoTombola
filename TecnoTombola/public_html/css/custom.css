@@ -1,0 +1,117 @@
+body{
+    overflow: auto;
+}
+button:hover,button.red:hover,#minus:hover,#manus:hover,#timeS:hover {
+    background: #fff;
+    color: #66A377;             
+}
+button.red{
+    background: #b94a48;
+}
+button {
+    border: none;
+    padding: 0.6em 1.2em;
+    background: #66A377;
+    color:#fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 2px;
+    width: 194px;
+    height: 55px;
+}
+label{
+    color:#30583B;
+    display: block;
+    font-size: 15px;
+    margin: 0 auto;
+    text-align: left;
+    width: 400px;                
+}
+p.s{
+    display: none;
+    margin: 0;
+}
+textarea{
+    background: #C0E0C8;
+    border: none;
+    color: #30583B;
+    font-size: 25px;
+    margin: 0;
+    outline: none;
+    overflow: hidden;
+    width: 75%;                
+}
+small{
+    color:#30583B;
+    display: inline-block;
+    font-size: 15px;
+    margin: 0 auto;
+}
+.operatios{
+    text-align: center;
+    min-width: 383px;
+    padding-left: 50px;
+}
+.operatios div{
+    margin: 0 auto;
+    width: 70%;
+}
+#participantes{
+    text-align: center;
+}
+#minus,#manus{
+    height: 23px;
+    width: 20px;
+}
+#minus,#manus,#timeS{
+    background-color: #66A377;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding: 2px;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+#timer{
+    text-align: center;
+    font-size: 8em;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+#timeS{
+    background-color: #C0E0C8;
+    display: inline-block;
+    min-width: 62px;
+    overflow-x: visible;
+    text-align: center;
+    width: auto;
+}
+.titleD{
+    padding-left: 50px;
+    vertical-align: middle;
+    text-align: center;
+    min-width: 383px;
+}
+.titleD span{
+    vertical-align: middle;
+}
+.back{
+    width: 50px;
+}
+.backD{
+    z-index: 2;
+    position:absolute;
+}
+.md-content button {
+    display: block;
+    margin: 0 auto;
+    font-size: 0.8em;
+}
+.oculto{
+    display: none;
+}
